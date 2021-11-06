@@ -21,11 +21,20 @@ namespace Riode.WebUI
         }
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllersWithViews();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseRouting();
 
+            app.UseEndpoints(cfg => {
+                cfg.MapControllerRoute("default", "{controller} / {action} / {id?}",
+                    defaults: new
+                    {
+                        controller = "home",
+                        action = "index"
+                    });
+            });
         }
     }
 }
