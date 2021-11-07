@@ -4192,9 +4192,9 @@ blockquote {
 }
 
 .alert-success {
-    background-color: #a8c26e;
-    border-color: #a8c26e;
-    color: #a8c26e;
+    background-color: white;
+    border-color: black;
+    color: black;
 }
 
 .alert-warning {
